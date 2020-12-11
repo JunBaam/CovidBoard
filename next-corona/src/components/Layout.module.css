@@ -1,0 +1,21 @@
+.container {
+  padding: 30px;
+  /* vh: 요소의 100분의 1  꽉채움*/
+  height: 100vh;
+  display: grid;
+
+  /* 1fr: 3분의 1*/
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 1.1rem;
+}
