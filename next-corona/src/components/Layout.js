@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
         <title>COVID </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className={styles.header}>코로나분석</header>
+      <header className={styles.header}>코로나 뷰 </header>
 
       <main className={styles.main}>{children}</main>
 
