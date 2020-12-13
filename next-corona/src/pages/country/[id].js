@@ -3,6 +3,9 @@ import styles from "./Country.module.css";
 
 const Country = ({ country }) => {
   console.log("받은값", country);
+
+  const date = new Date(parseInt(country.updated));
+  const lastUpdated = date.toString();
   return (
     <Layout>
       <div className={styles.detail_container}>
@@ -30,7 +33,8 @@ const Country = ({ country }) => {
 
         <div className={styles.right_detail_container}>
           <div className={styles.right_detail_heading}>
-            COVID-19 Info : {country.country}
+            COVID-19 Info : {country.country} <br />
+            {lastUpdated}
           </div>
 
           <div className={styles.right_detail_item}>
