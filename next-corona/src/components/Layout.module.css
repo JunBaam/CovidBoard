@@ -38,6 +38,7 @@
   border: none;
   background-color: transparent;
   padding: 0;
-
+  margin-top: 7px;
+  cursor: pointer;
   color: var(--text-color-secondary);
 }

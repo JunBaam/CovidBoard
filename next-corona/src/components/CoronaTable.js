@@ -65,13 +65,8 @@ const CoronaTable = ({ countries }) => {
     <div>
       <div className={styles.heading}>
         <div className={styles.heading_flag}></div>
-        <span
-          className={styles.heading_name}
-          // onClick={() => setValueAndDirection("country")}
-        >
+        <span className={styles.heading_name}>
           <div>나라이름</div>
-
-          {/* {value === "country" && <SortArrow direction={direction} />} */}
         </span>
 
         <button
@@ -83,7 +78,7 @@ const CoronaTable = ({ countries }) => {
         </button>
 
         <button className={styles.heading_recover}>
-          <div>완치자</div>
+          <div>격리해제</div>
         </button>
 
         <button className={styles.heading_death}>

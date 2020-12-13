@@ -1,4 +1,4 @@
-import { Brightness6Rounded } from "@material-ui/icons";
+import { BrightnessMedium } from "@material-ui/icons";
 import { useState, useCallback, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -42,16 +42,17 @@ const Layout = ({ children }) => {
         <Link href="/">
           <a>코로나 뷰</a>
         </Link>
-        {/* 테마 변경버튼  */}
-        <button className={styles.theme_mode_btn} onClick={changeTheme}>
-          <Brightness6Rounded />
-        </button>
+
+        <BrightnessMedium
+          className={styles.theme_mode_btn}
+          onClick={changeTheme}
+        />
       </header>
+
       <div className={styles.header_info}>
         (COVID-19 data sourced from Worldometers, updated every 10 minutes)
       </div>
 
-      {/* <img src="/moon.png" /> */}
       <main className={styles.main}>{children}</main>
 
       <footer className={styles.footer}>

@@ -23,7 +23,7 @@ const GlobalBorad = ({ global, korea }) => {
           <div className={styles.korea_case_today}>(+ {global.todayCases})</div>
         </div>
         <div className={styles.global_recover}>
-          완치자
+          격리해제
           <div className={styles.global_recover_count}>{global.recovered}</div>
           <div className={styles.korea_recover_today}>
             (+ {global.todayRecovered})

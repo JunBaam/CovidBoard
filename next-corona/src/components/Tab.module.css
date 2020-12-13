@@ -1,0 +1,26 @@
+.tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  border-bottom: 2px solid #222949;
+}
+
+.tabs li {
+  padding: 0.5em 1em;
+  margin: 0 1em;
+  transition: 0.5s ease-in-out;
+}
+
+.current {
+  background-color: var(--background-color);
+  color: #007aff;
+  font-weight: 700;
+  font-size: 20px;
+  border: 2px solid #222949;
+  border-bottom: 0;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+  position: relative;
+  top: 2px;
+}

@@ -4,9 +4,9 @@ import CoronaTable from "../components/CoronaTable";
 import Layout from "../components/Layout";
 import SearchInput from "../components/SearchInput";
 import styles from "../styles/Home.module.css";
-import axios from "axios";
 import GlobalBorad from "../components/GlobalBorad";
-import useBookSearch from "../components/useBookSearch";
+
+import Tabs from "../components/Tabs";
 
 export default function Home({ countries, global, korea }) {
   const [keyword, setKeyword] = useState("");
@@ -24,12 +24,18 @@ export default function Home({ countries, global, korea }) {
   return (
     <Layout>
       <GlobalBorad global={global} korea={korea} />
+      <Tabs>
+        <div label="대한민국 상세정보">
+          <h2>Tab2</h2>
+          <p>두번쨰 테테테테테테테텝</p>
+        </div>
 
-      <div className={styles.counts}>총 {countries.length}개의 나라</div>
-
-      <SearchInput placeholder="검색" onChange={onInpuChange} />
-
-      <CoronaTable countries={filterCountries} />
+        <div label="전세계 정보/검색">
+          <div className={styles.counts}>총 {countries.length}개의 나라</div>
+          <SearchInput placeholder="검색" onChange={onInpuChange} />
+          <CoronaTable countries={filterCountries} />
+        </div>
+      </Tabs>
     </Layout>
   );
 }
