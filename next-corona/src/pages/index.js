@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useCallback } from "react";
 import Head from "next/head";
 import CoronaTable from "../components/CoronaTable";
 import Layout from "../components/Layout";
@@ -6,14 +6,30 @@ import SearchInput from "../components/SearchInput";
 import styles from "../styles/Home.module.css";
 import axios from "axios";
 import GlobalBorad from "../components/GlobalBorad";
+import useBookSearch from "../components/useBookSearch";
 
 export default function Home({ countries, global, korea }) {
+  const [keyword, setKeyword] = useState("");
+
+  //toLowerCase :소문자변환
+  const filterCountries = countries.filter(country =>
+    country.country.toLowerCase().includes(keyword)
+  );
+
+  const onInpuChange = useCallback(e => {
+    e.preventDefault();
+    setKeyword(e.target.value.toLowerCase());
+  });
+
   return (
     <Layout>
       <GlobalBorad global={global} korea={korea} />
+
       <div className={styles.counts}>총 {countries.length}개의 나라</div>
-      <SearchInput placeholder="검색" />
-      <CoronaTable countries={countries} />
+
+      <SearchInput placeholder="검색" onChange={onInpuChange} />
+
+      <CoronaTable countries={filterCountries} />
     </Layout>
   );
 }

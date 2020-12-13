@@ -2,9 +2,19 @@ import React from "react";
 import styles from "./GlobalBorad.module.css";
 
 const GlobalBorad = ({ global, korea }) => {
+  const date = new Date(parseInt(global.updated));
+  const lastUpdated = date.toString();
+
   return (
     <div className={styles.board_container}>
-      <div className={styles.global_title}>전세계 현황</div>
+      <div className={styles.global_title}>
+        전세계 현황 <br />
+        <div className={styles.global_info}>
+          {/* 현재 정적으로 가져온데이터를 클라이언트에서 바꾸었기 떄문에 
+           Text content did not match. Server 에러가뜬다 . */}
+          {/* 마지막 업데이트 {lastUpdated} */}
+        </div>
+      </div>
 
       <div className={styles.global_board}>
         <div className={styles.global_case}>
@@ -27,7 +37,6 @@ const GlobalBorad = ({ global, korea }) => {
           </div>
         </div>
       </div>
-
       <div className={styles.korea_title}>대한민국 현황</div>
       <div className={styles.korea_board}>
         <div className={styles.korea_case}>
