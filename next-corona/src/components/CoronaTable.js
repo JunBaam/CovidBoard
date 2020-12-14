@@ -92,13 +92,16 @@ const CoronaTable = ({ countries }) => {
             <div className={styles.flag}>
               <img src={country.countryInfo.flag} alt={country.country} />
             </div>
-            <div className={styles.name}>{country.country}</div>
+            <div className={styles.name}>{country.country} </div>
 
-            <div className={styles.case}>{country.cases}</div>
+            <div className={styles.case}>
+              {country.cases}
+              <span>명</span>
+            </div>
 
-            <div className={styles.recover}>{country.recovered}</div>
+            <div className={styles.recover}>{country.recovered}명 </div>
 
-            <div className={styles.death}>{country.deaths} </div>
+            <div className={styles.death}>{country.deaths}명 </div>
           </div>
         </Link>
       ))}

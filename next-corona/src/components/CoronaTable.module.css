@@ -68,23 +68,22 @@
 .name {
   flex: 4;
   text-align: left;
+  font-weight: 600;
 }
 
-.case {
-  flex: 4;
-}
-
+.case,
+.death,
 .recover {
   flex: 4;
+  font-weight: 600;
 }
-
-.death {
-  flex: 4;
+.case {
+  margin-right: 10px;
 }
 
 .flag {
   flex: 1;
-  margin-right: 16px;
+  margin-right: 12px;
 }
 
 .flag img {

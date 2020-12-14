@@ -4,7 +4,6 @@ import Layout from "../components/Layout";
 import SearchInput from "../components/SearchInput";
 import styles from "../styles/Home.module.css";
 import GlobalBorad from "../components/GlobalBorad";
-import axios from "axios";
 import Tabs from "../components/Tabs";
 import KoreaTab from "../components/KoreaTab";
 
@@ -25,7 +24,7 @@ export default function Home({ countries, global, korea }) {
     <Layout>
       <GlobalBorad global={global} korea={korea} />
       <Tabs>
-        <div label="대한민국 상세정보">
+        <div label="국내 차트정보">
           <KoreaTab />
         </div>
 
