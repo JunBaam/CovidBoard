@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./Tab.module.css";
 
 const Tabs = ({ children }) => {
-  console.log({ children });
+  // console.log({ children });
 
   const [activeTab, setActiveTab] = useState(children[0].props.label);
 

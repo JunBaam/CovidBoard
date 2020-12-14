@@ -77,7 +77,6 @@ const Country = ({ country }) => {
   );
 };
 
-// getServerSideProps : 필요할떄마다 데이터를 받아옴
 export const getServerSideProps = async ({ params }) => {
   const response = await fetch(
     `https://disease.sh/v3/covid-19/countries/${params.id}`

@@ -4,6 +4,8 @@
   margin: 0;
   display: flex;
   border-bottom: 2px solid #222949;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .tabs li {
@@ -15,8 +17,8 @@
 .current {
   background-color: var(--background-color);
   color: #007aff;
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: bold;
+  font-size: 17px;
   border: 2px solid #222949;
   border-bottom: 0;
   border-top-right-radius: 7px;

@@ -96,9 +96,9 @@ const CoronaTable = ({ countries }) => {
 
             <div className={styles.case}>{country.cases}</div>
 
-            <div className={styles.recover}>{country.recovered || 0}</div>
+            <div className={styles.recover}>{country.recovered}</div>
 
-            <div className={styles.death}>{country.deaths || 0}</div>
+            <div className={styles.death}>{country.deaths} </div>
           </div>
         </Link>
       ))}

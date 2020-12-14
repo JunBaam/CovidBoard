@@ -7,74 +7,57 @@
   flex-wrap: wrap;
 }
 
-.global_title,
-.korea_title {
+.board_title {
   text-align: center;
   font-size: 30px;
   font-weight: 800;
   margin: 20px;
 }
-.global_info {
-  font-size: 16px;
-}
 
-.global_board,
-.korea_board {
+.board {
   display: flex;
-  margin-top: 20px;
-  font-size: 20px;
-  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px 0 gray;
+  padding: 20px 20px;
+  margin: 10px 50px;
+  gap: 100px;
+  justify-content: center;
 }
 
-.global_case,
-.global_recover,
-.global_death,
-.korea_case,
-.korea_recover,
-.korea_death {
+.global_case {
   display: flex;
   flex-direction: column;
   text-align: center;
-  border-radius: 15px;
-  box-shadow: 0 2px 4px 0 gray;
-
-  padding: 20px 20px;
-  margin: 10px 50px;
-}
-.korea_case,
-.global_case {
-  border-bottom: 10px solid rgba(0, 0, 255, 0.5);
-}
-.korea_recover,
-.global_recover {
-  border-bottom: 10px solid rgba(0, 255, 0, 0.5);
-}
-.korea_death,
-.global_death {
-  border-bottom: 10px solid rgba(255, 0, 0, 0.5);
+  font-size: 23px;
+  font-weight: 700;
 }
 
-.global_case_count,
-.global_recover_count,
-.global_death_count,
-.korea_case_count,
-.korea_recover_count,
-.korea_death_count {
-  font-size: 28px;
+.global_case_count {
+  font-weight: 400;
 }
-.korea_case_today,
-.korea_death_today {
-  font-weight: 200;
-  color: red;
+
+.global_case_count_today {
+  font-weight: 400;
+  color: #f17d96;
+  background-color: #fdeaee;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 18px;
 }
-.korea_recover_today {
-  font-weight: 200;
+
+.global_recover_count_today {
+  font-weight: 500;
   color: #0090a5;
+  background-color: #e7f6f8;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 18px;
 }
 
 @media screen and (max-width: 720px) {
-  .global_board,
-  .korea_board {
+  .board {
     flex-direction: column;
+    text-align: center;
+    justify-content: center;
   }
 }

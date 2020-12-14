@@ -1,12 +1,12 @@
 import React, { useState, useCallback } from "react";
-import Head from "next/head";
 import CoronaTable from "../components/CoronaTable";
 import Layout from "../components/Layout";
 import SearchInput from "../components/SearchInput";
 import styles from "../styles/Home.module.css";
 import GlobalBorad from "../components/GlobalBorad";
-
+import axios from "axios";
 import Tabs from "../components/Tabs";
+import KoreaTab from "../components/KoreaTab";
 
 export default function Home({ countries, global, korea }) {
   const [keyword, setKeyword] = useState("");
@@ -26,8 +26,7 @@ export default function Home({ countries, global, korea }) {
       <GlobalBorad global={global} korea={korea} />
       <Tabs>
         <div label="대한민국 상세정보">
-          <h2>Tab2</h2>
-          <p>두번쨰 테테테테테테테텝</p>
+          <KoreaTab />
         </div>
 
         <div label="전세계 정보/검색">
@@ -42,9 +41,6 @@ export default function Home({ countries, global, korea }) {
 
 //정적페이지를 미리 랜더링(빌드후 변경불가!) 빌드 시점에 API 값을 조회
 export const getStaticProps = async () => {
-  // const res = await fetch("https://covid19.mathdro.id/api/countries");
-  // const countries = await res.json();
-
   const res = await fetch("https://disease.sh/v3/covid-19/countries");
   const countries = await res.json();
 
