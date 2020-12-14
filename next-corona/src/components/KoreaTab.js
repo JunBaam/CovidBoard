@@ -14,7 +14,6 @@ const KoreaTab = () => {
         "https://api.covid19api.com/total/dayone/country/kr"
       );
 
-      //console.log("원본", res);
       makeData(res.data);
     };
     const makeData = items => {
@@ -58,8 +57,6 @@ const KoreaTab = () => {
 
         return acc;
       }, []);
-
-      console.log(arr);
 
       const labels = arr.map(a => `${a.month + 1}월`);
       setConfirmedData({

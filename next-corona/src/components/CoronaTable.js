@@ -7,8 +7,6 @@ import {
 } from "@material-ui/icons";
 
 const orderBy = (countries, value, direction) => {
-  // console.log(countries);
-
   //오름차순
   if (direction === "asc") {
     return [...countries].sort((a, b) => (a[value] > b[value] ? 1 : -1));
