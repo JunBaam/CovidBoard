@@ -38,8 +38,7 @@ export default function Home({ countries, global, korea }) {
   );
 }
 
-//정적페이지를 미리 랜더링(빌드후 변경불가!) 빌드 시점에 API 값을 조회
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch("https://disease.sh/v3/covid-19/countries");
   const countries = await res.json();
 
